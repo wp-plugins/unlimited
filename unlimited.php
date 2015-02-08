@@ -1,14 +1,14 @@
 <?php
 /**
  * @package Unlimited
- * @version 0.1
+ * @version 0.2
  */
 /*
 Plugin Name: Unlimited
 Plugin URI: http://wordpress.org/plugins/unlimited/
 Description: Infinite scrolling for wordpress.
 Author: Plugin Builders
-Version: 0.1
+Version: 0.2
 Author URI: http://plugin.builders/
 */
 
