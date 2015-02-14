@@ -8,7 +8,7 @@ Plugin Name: Unlimited
 Plugin URI: http://wordpress.org/plugins/unlimited/
 Description: Infinite scrolling for wordpress.
 Author: Plugin Builders
-Version: 0.2
+Version: 0.3
 Author URI: http://plugin.builders/
 */
 

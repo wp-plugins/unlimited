@@ -16,7 +16,7 @@ Doesn't break browser Back/Forward buttons. Includes Scroll to Top button. Works
 
 == Screenshots ==
 1. Select post and navigation for your custom themes.
-1. You can create multiple settings to accomodate different templates.
+2. You can create multiple settings to accomodate different templates.
 
 == Installation ==
 Upload Unlimited folder to your wp-content/plugins/ directory.
