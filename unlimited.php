@@ -1,7 +1,7 @@
 <?php
 /**
  * @package Unlimited
- * @version 0.2
+ * @version 0.3
  */
 /*
 Plugin Name: Unlimited

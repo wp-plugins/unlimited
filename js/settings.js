@@ -77,7 +77,7 @@ jQuery(document).ready(function($){
 	UN.prototype.init = function(id){
 		this.item_id = id;
 		this.data = WPB.store[id];
-		this.data.theme = WPB.server.theme;
+		this.data.theme = WPB.theme_selectors[WPB.server.theme] ? WPB.server.theme : '';
 		this.render();
 	};
 	
@@ -110,6 +110,7 @@ jQuery(document).ready(function($){
 	UN.prototype.render = function(){
 		var un = this;
 		un.data.form_id = un.form_id;
+		console.log(un.data);
 		$('#pb-un-editor').html(WPB.template('#pb-un-form-tmpl')(un.data));
 		$(un.selector +' .pb-un-chose-type:checked').parent().next('.pb-un-chosen-type').removeClass('pb-hidden');
 		un.form = $(un.selector);
