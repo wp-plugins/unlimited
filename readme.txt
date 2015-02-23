@@ -8,7 +8,7 @@ Stable tag: 0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Inifinite scrolling plugin. Choose from Load on scroll, Load more button and Ajax Pagination. Includes scroll to top button.
+Inifinite scrolling plugin. Choose from Load on scroll, Load more button and Ajax Pagination. Includes scroll to top and opt-out button.
 
 == Description ==
 Inifinite scrolling plugin. Choose from Load on scroll, Load more button or Ajax Pagination. Visitor can disabe auto load (useful to get to footer).
