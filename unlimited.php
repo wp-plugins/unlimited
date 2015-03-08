@@ -44,6 +44,11 @@ class WPB_Unlimited{
 				<button id="pb-un-add-new" class="button button-primary">Add New</button>
 			</div>
 			<div id="pb-un-editor"></div>
+			<div id="pbc-feedback">
+				<a class="button" href="mailto:suggest@plugin.builders?subject=Extend Unlimited">Suggest Feature</a>
+				<a class="button" href="mailto:support@plugin.builders?subject=Unlimited Problem">Report Issue</a>
+				<a class="button" href="https://wordpress.org/support/view/plugin-reviews/unlimited?#postform" target="_blank">Rate It</a>
+			</div>
 		</div>
 		<?php
 		$this->templates();
