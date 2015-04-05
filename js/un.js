@@ -8,9 +8,7 @@ jQuery(document).ready(function($){
 		});
 		
 		pb_selectors.some(function(sel){
-			if($(sel.content).length && $(sel.content +' '+ sel.post).length){
-			//if($(sel.content).length && $(sel.content +' '+ sel.post).length && $(sel.nav).length){
-				//WPB.uns[++WPB.uns.id] = 
+			if($(sel.content).length && $(sel.content +' '+ sel.post).length && $(sel.nav).length){
 				new UN(sel, WPB.uns.id);
 				return true;
 			}
@@ -115,7 +113,6 @@ jQuery(document).ready(function($){
 	UN.prototype.replaceNav = function(){
 		var un = this;
 		var nav = $(un.data.nav);
-		if(!nav.length) return false;
 		var css = nav.css(['margin', 'font-family', 'background']);
 		var next_a = nav.find(un.data.next).attr('href');
 				
