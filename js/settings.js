@@ -100,6 +100,7 @@ jQuery(document).ready(function($){
 			'name': 'Settings-'+this.id,
 			'status': 'on',
 			'can_opt_out': 'on',
+			'scroll_to_top': 'on',
 			'stop_text': 'Disable Auto-Load',
 			'start_text': 'Enable Auto-Load',
 			'theme': WPB.theme_selectors[WPB.server.theme] ? WPB.server.theme : ''
@@ -110,7 +111,6 @@ jQuery(document).ready(function($){
 	UN.prototype.render = function(){
 		var un = this;
 		un.data.form_id = un.form_id;
-		console.log(un.data);
 		$('#pb-un-editor').html(WPB.template('#pb-un-form-tmpl')(un.data));
 		$(un.selector +' .pb-un-chose-type:checked').parent().next('.pb-un-chosen-type').removeClass('pb-hidden');
 		un.form = $(un.selector);
@@ -215,6 +215,7 @@ jQuery(document).ready(function($){
 	
 	WPB.list = function(re){
 		re.forEach(function(r, i){
+			if(r.scroll_to_top === undefined) r.scroll_to_top = 'on';
 			WPB.store[i] = r;
 			WPB.item(i, r);
 		});

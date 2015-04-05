@@ -142,6 +142,12 @@
 								<input type="hidden" name="key" value="<%= key %>"/>
 							</div>	
 					</label></div>
+					<div class="pb-un-field-row pb-clr"><label>
+						<span class="pb-un-label">Scroll to Top</span>
+							<div class="pb-un-input-wrapper">
+								<input type="checkbox" name="scroll_to_top" <%- scroll_to_top === 'on' ? 'checked' : '' %>/>
+							</div>	
+					</label></div>
 				</div>
 			</fieldset>
 			
