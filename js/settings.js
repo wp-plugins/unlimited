@@ -1,5 +1,5 @@
 jQuery(document).ready(function($){
-	WPB = {'un':0, 'uns':{}, 'store':{}};
+	WPB = {'un':0, 'uns':{}, 'store':{}, 'terms': wpb_translated_terms};
 	
 	WPB.theme_selectors = {
 		'Twenty Fifteen': ['#content', 'article.post', '.navigation.pagination', '.next'],
@@ -85,8 +85,8 @@ jQuery(document).ready(function($){
 		this.data = {
 			'key': '',
 			'threshold': 100,
-			'load_more_text': 'Load more',
-			'loading_text': 'Loading...',
+			'load_more_text': WPB.terms.load_more,
+			'loading_text': WPB.terms.loading+'...',
 			'untype': 'scroll',
 			'content': WPB.selectors[0],
 			'post':WPB.selectors[1],
@@ -94,15 +94,15 @@ jQuery(document).ready(function($){
 			'next': WPB.selectors[3],
 			'loader_img_url': WPB.server.site+'/wp-admin/images/loading.gif',
 			'loader_img_name': 'loading.gif',
-			'no_more_text': 'No more posts to show',
+			'no_more_text': WPB.terms.no_more_posts,
 			'history': 'on',
 			'scrollto': 'html, body',
-			'name': 'Settings-'+this.id,
+			'name': WPB.terms.settings+'-'+this.id,
 			'status': 'on',
 			'can_opt_out': 'on',
 			'scroll_to_top': 'on',
-			'stop_text': 'Disable Auto-Load',
-			'start_text': 'Enable Auto-Load',
+			'stop_text': WPB.terms.disable+' '+WPB.terms.auto_load,
+			'start_text': WPB.terms.enable+' '+WPB.terms.auto_load,
 			'theme': WPB.theme_selectors[WPB.server.theme] ? WPB.server.theme : ''
 		}
 		this.render();
@@ -175,7 +175,7 @@ jQuery(document).ready(function($){
 		var un = this;
 		var data = WPB.form(un.selector);
 		
-		$('.pb-un-save').text('Saving...');
+		$('.pb-un-save').text(WPB.terms.saving+'...');
 		$('.pb-un-delete').addClass('pb-hidden');
 		
 		var form = new FormData();
@@ -189,7 +189,7 @@ jQuery(document).ready(function($){
 			
 		WPB.formpost(form, function(re){
 			if(!re){
-				$('.pb-un-save').removeClass('button-primary').text('Something\'s wrong, please try again or reload the page');
+				$('.pb-un-save').removeClass('button-primary').text(WPB.terms.something_wrong);
 			} else {
 				data.key = re;
 				WPB.store[un.item_id] = data;
@@ -202,7 +202,7 @@ jQuery(document).ready(function($){
 	
 	UN.prototype.del = function(){
 		var un = this;
-		$('.pb-un-delete').text('Deleting..');
+		$('.pb-un-delete').text(WPB.terms.deleting+'...');
 		$('.pb-un-save').addClass('pb-hidden');
 		WPB.post({'action':'pb_un_delete', 'del_key': un.data.key}, function(re){
 			if(re){

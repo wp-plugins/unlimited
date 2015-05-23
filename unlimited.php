@@ -4,12 +4,14 @@
  * @version 0.4.1
  */
 /*
-Plugin Name: Unlimited
-Plugin URI: http://wordpress.org/plugins/unlimited/
-Description: Infinite scrolling for wordpress.
-Author: Plugin Builders
-Version: 0.4.1
-Author URI: http://plugin.builders/
+	Plugin Name: Unlimited
+	Plugin URI: http://wordpress.org/plugins/unlimited/
+	Description: Infinite scrolling for wordpress.
+	Author: Plugin Builders
+	Version: 0.4.1
+	Author URI: http://plugin.builders/
+	Text Domain: unlimited
+	Domain Path: languages
 */
 
 class WPB_Unlimited{
@@ -18,6 +20,7 @@ class WPB_Unlimited{
 		
 		add_action('admin_enqueue_scripts', array($this, 'loadDashJs'));
 		add_action('wp_enqueue_scripts', array($this, 'loadJs'));
+		add_action('plugins_loaded', array($this, 'loadTextDomain') );
 		
 		add_action('wp_ajax_pb_un_get', array($this, 'getAll'));
 		add_action('wp_ajax_pb_un_save', array($this, 'save'));
@@ -35,19 +38,23 @@ class WPB_Unlimited{
 		);
 	}
 	
+	public function loadTextDomain(){
+		load_plugin_textdomain( 'unlimited', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+	}
+	
 	public function pageTemplate(){ ?>
 		<div class="wrap pb-un-wrapper">
 			<div id="icon-themes" class="icon32"></div>
 			<h2>Unlimited</h2>
 			<div id="pb-un-wrapper" data-theme="<?php echo wp_get_theme(); ?>" data-site="<?php echo get_option('siteurl'); ?>">
 				<div id="pb-un-items"></div>
-				<button id="pb-un-add-new" class="button button-primary">Add New</button>
+				<button id="pb-un-add-new" class="button button-primary"><?php _e('Add New', 'unlimited'); ?></button>
 			</div>
 			<div id="pb-un-editor"></div>
 			<div id="pbc-feedback">
-				<a class="button" href="mailto:suggest@plugin.builders?subject=Extend Unlimited">Suggest Feature</a>
-				<a class="button" href="mailto:support@plugin.builders?subject=Unlimited Problem">Report Issue</a>
-				<a class="button" href="https://wordpress.org/support/view/plugin-reviews/unlimited?#postform" target="_blank">Rate It</a>
+				<a class="button" href="mailto:suggest@plugin.builders?subject=Extend Unlimited"><?php _e('Suggest Feature', 'unlimited'); ?></a>
+				<a class="button" href="mailto:support@plugin.builders?subject=Unlimited Problem"><?php _e('Report Issue', 'unlimited'); ?></a>
+				<a class="button" href="https://wordpress.org/support/view/plugin-reviews/unlimited?#postform" target="_blank"><?php _e('Write a review', 'unlimited'); ?></a>
 			</div>
 		</div>
 		<?php
