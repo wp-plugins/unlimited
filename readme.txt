@@ -14,6 +14,8 @@ Inifinite scrolling plugin. Choose from Load on scroll, Load more button and Aja
 Inifinite scrolling plugin. Choose from Load on scroll, Load more button and Ajax Pagination. Visitor can disable auto load (useful to get to footer).
 Doesn't break browser Back/Forward buttons. Includes Scroll to Top button (Optional). Works out of the box for default WP themes.
 
+**Translation-ready**
+
 == Screenshots ==
 1. Select post and navigation for your custom themes.
 1. You can create multiple settings to accomodate different templates.
