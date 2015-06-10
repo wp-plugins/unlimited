@@ -87,7 +87,7 @@ jQuery(document).ready(function($){
 		var un = this;
 		page = $(page);
 		if(un.data.untype === 'ajax'){
-			$('html,body').animate({'scrollTop': 0});
+			$('html,body').animate({'scrollTop': $(un.data.content).position().top});
 			$(un.data.content).html($(page).find(un.data.content).html());
 			un.unnav = $(un.data.nav);
 		} else {
@@ -99,7 +99,7 @@ jQuery(document).ready(function($){
 	UN.prototype.scroll = function(page, url){
 		var un = this;
 		if(un.data.untype === 'ajax'){
-			$('html,body').animate({'scrollTop': 0});
+			$('html,body').animate({'scrollTop': un.data.content.scrollTop()});
 			un.ajax_sections.append('<div class="pb-un-ajax-section" data-page="'+un.history.send+'">'+$(un.data.content).html()+'</div>');
 			var section = un.ajax_sections.children('.pb-un-ajax-section[data-page="'+un.history.get+'"]');
 			$(un.data.content).html(section.html());
