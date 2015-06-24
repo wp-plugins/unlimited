@@ -3,8 +3,8 @@ Contributors: plugin.builders
 Tags: infinite scrolling, ajax pagination, load more, usability, infinite scroll, animation, pagination, ajax, infinite, scroll, scroll to top, top, history, back, forward, custom, auto, opt-out, disable, admin, options
 Donate link: http://plugin.builders
 Requires at least: 3.0
-Tested up to: 4.1.1
-Stable tag: 0.4.1
+Tested up to: 4.2.2
+Stable tag: 0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,7 +14,10 @@ Inifinite scrolling plugin. Choose from Load on scroll, Load more button and Aja
 Inifinite scrolling plugin. Choose from Load on scroll, Load more button and Ajax Pagination. Visitor can disable auto load (useful to get to footer).
 Doesn't break browser Back/Forward buttons. Includes Scroll to Top button (Optional). Works out of the box for default WP themes.
 
-**Translation-ready**
+** Translations **
+
+* Spanish - [WebHostingHub](http://www.webhostinghub.com/)
+
 
 == Screenshots ==
 1. Select post and navigation for your custom themes.
