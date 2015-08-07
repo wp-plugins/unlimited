@@ -15,6 +15,7 @@
 */
 
 class WPB_Unlimited{
+
 	function __construct(){
 		add_action('admin_menu', array($this, 'createMenu'));
 		

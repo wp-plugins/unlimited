@@ -3,7 +3,7 @@ Contributors: plugin.builders
 Tags: infinite scrolling, ajax pagination, load more, usability, infinite scroll, animation, pagination, ajax, infinite, scroll, scroll to top, top, history, back, forward, custom, auto, opt-out, disable, admin, options
 Donate link: http://plugin.builders
 Requires at least: 3.0
-Tested up to: 4.2.2
+Tested up to: 4.2.4
 Stable tag: 0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
