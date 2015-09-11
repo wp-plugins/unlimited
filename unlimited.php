@@ -87,11 +87,11 @@ class WPB_Unlimited{
 	 * stores input types,  not listed ones are supposed to be strings.
 	 *
 	*/
+	
 	public $fields = array(
 		'threshold' => 'int',
 		'loader_img_url' => 'url'
 	);
-	
 	
 	public function save(){
 		$d = json_decode(stripslashes($_POST['un_data']));
